@@ -35,7 +35,7 @@ docker push $aws_account_id.dkr.ecr.$region.amazonaws.com/$ecr_repo:$tag
 
 This is how it looks like once you push the image to the ECR
 
-![Alt text](/img/ecr_pushed.png?raw=true "Imaged Pushed")
+![Alt text](/ECR/img/ecr_pushed.png?raw=true "Imaged Pushed")
 
 
 ## Pullling an Image
