@@ -15,7 +15,7 @@ spec:
     targetRevision: main
     path: ARGOCD_Workloads/teams/blue/dev
   syncPolicy:
-    automated:terr
+    automated:
       prune: true
       selfHeal: true
       allowEmpty: true
