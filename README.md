@@ -26,20 +26,19 @@ terraform plan --var-file=inputs.tfvars
 terraform apply --var-file=inputs.tfvars
 ```
 
-Aprox Estimated time : 3 min
+Aprox Estimated time for TF apply  : 3 min
 
 ## Image Build
-
 Instructions to build sample images for the demo.
 
 ## ECR
-
 To provision ECR repo and instructions to push images to it.
+Aprox Estimated time for TF apply  : < 1 min
 
 ## ECS
-
-To provision ECS cluster 
+To provision ECS cluster.
+Aprox Estimated time for TF apply  : < 2 min
 
 ## EKS
-
-To provision EKS cluster
+To provision EKS cluster.
+Aprox Estimated time for TF apply  : ~ 15 min

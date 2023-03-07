@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: team-blue-dev
+  namespace: argocd
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  project: default
+  destination:
+    namespace: team-blue-dev
+    server: https://kubernetes.default.svc
+  source:
+    repoURL: https://github.com/lkravi/AWS_Container_Services.git
+    targetRevision: main
+    path: ARGOCD_Workloads/teams/blue/dev
+  syncPolicy:
+    automated:terr
+      prune: true
+      selfHeal: true
+      allowEmpty: true
+    syncOptions:
+    - CreateNamespace=true
