@@ -73,7 +73,7 @@ module "eks_blueprints" {
 resource "time_sleep" "wait_for_cluster" {
   depends_on = [module.eks_blueprints]
 
-  create_duration = "120s"
+  create_duration = "60s"
 
   triggers = {
     "always_run" = timestamp()
@@ -82,7 +82,7 @@ resource "time_sleep" "wait_for_cluster" {
 
 #region ADDONS
 module "eks_blueprints_kubernetes_addons" {
-  source = "github.com/aws-ia/terraform-aws-eks-blueprints//modules/kubernetes-addons?ref=v4.8.0"
+  source = "github.com/aws-ia/terraform-aws-eks-blueprints//modules/kubernetes-addons?ref=v4.25.0"
 
   eks_cluster_id = module.eks_blueprints.eks_cluster_id
 
@@ -139,7 +139,6 @@ module "eks_blueprints_kubernetes_addons" {
   enable_metrics_server               = true
   enable_prometheus                   = true
   enable_grafana                      = true
-  enable_external_secrets             = true
   enable_aws_efs_csi_driver           = true
   enable_aws_cloudwatch_metrics       = true
   #endregion

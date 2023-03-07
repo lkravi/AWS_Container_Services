@@ -16,10 +16,6 @@ Run update-kubeconfig command:
 aws eks --region us-east-1 update-kubeconfig --name containers-on-eks
 ```
 
-## Live Demo
-
-[![Watch the Video](https://img.youtube.com/vi/AavVfkZQp4k/maxresdefault.jpg)](https://www.youtube.com/watch?v=AavVfkZQp4k)
-
 ### Access ArgoCD UI
 ```
 kubectl port-forward svc/argo-cd-argocd-server 8080:443 -n argocd
@@ -35,7 +31,6 @@ aws secretsmanager get-secret-value --secret-id argocd --region us-east-1
 ```
 terraform destroy -target=module.eks_blueprints_kubernetes_addons -auto-approve
 terraform destroy -target=module.eks_blueprints -auto-approve
-terraform destroy -target=module.vpc -auto-approve
 terraform destroy -auto-approve
 ```
 

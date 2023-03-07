@@ -1,6 +1,6 @@
 locals {
     name = "container"
-    cluster_name = "eks-demo"
+    cluster_name = "containers-on-eks"
 }
 
 module "vpc" {

@@ -8,7 +8,7 @@ metadata:
     kubernetes.io/ingress.class: "nginx"
 spec:
   rules:
-    - host: app.dev.lkravi.me
+    - host: app.eks.lkravi.live
       http:
         paths:
           - backend:

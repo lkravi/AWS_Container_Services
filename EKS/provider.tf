@@ -63,7 +63,7 @@ data "aws_caller_identity" "current" {}
 data "aws_region" "current" {}
 
 data "aws_acm_certificate" "issued" {
-  domain   = "lkravi.me"
+  domain   = "lkravi.live"
   statuses = ["ISSUED"]
 }
 
