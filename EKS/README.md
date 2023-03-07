@@ -16,6 +16,7 @@ Run update-kubeconfig command:
 aws eks --region us-east-1 update-kubeconfig --name containers-on-eks
 ```
 
+
 ### Access ArgoCD UI
 ```
 kubectl port-forward svc/argo-cd-argocd-server 8080:443 -n argocd
