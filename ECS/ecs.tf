@@ -28,7 +28,15 @@ resource "aws_ecs_task_definition" "task" {
           "containerPort" : 80,
           "hostPort"      : 80
         }
-      ]
+      ],
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "${aws_cloudwatch_log_group.log_group.name}",
+          "awslogs-region": "us-east-1",
+          "awslogs-stream-prefix": "nginx"
+        }
+      }
     }
   ]
   DEFINITION
@@ -53,5 +61,5 @@ resource "aws_ecs_service" "service" {
 }
 
 resource "aws_cloudwatch_log_group" "log_group" {
-  name = "containers"
+  name = "ecs"
 }

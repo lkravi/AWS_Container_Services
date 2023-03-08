@@ -24,7 +24,8 @@ docker images
 ### Tag your image with ECR registry
 ```
 export ecr_repo=ecr_demo
-docker tag my-nginx $aws_account_id.dkr.ecr.$region.amazonaws.com/$ecr_repo:latest
+export tag=latest
+docker tag my-nginx $aws_account_id.dkr.ecr.$region.amazonaws.com/$ecr_repo:$tag
 ```
 
 ### Push image
