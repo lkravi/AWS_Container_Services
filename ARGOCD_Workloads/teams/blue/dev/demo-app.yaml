@@ -17,9 +17,10 @@ spec:
     spec:
       containers:
       - name: go-web-container
-        image: lkravi/eks_bp_demo:d8c465c6
+        #image: lkravi/eks_bp_demo:d8c465c6
+        image: 408007299814.dkr.ecr.us-east-1.amazonaws.com/ecr_demo:latest
         ports:
-        - containerPort: 8080
+        - containerPort: 80
         resources:
           requests:
             memory: "64Mi"
@@ -39,4 +40,4 @@ spec:
   ports:
     - protocol: TCP
       port: 80
-      targetPort: 8080
+      targetPort: 80
