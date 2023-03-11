@@ -130,7 +130,7 @@ module "eks_blueprints_kubernetes_addons" {
   ingress_nginx_helm_config = {
     version   = "4.0.17"
     values    = [templatefile("${path.module}/static/nginx_values.yaml", {})]
-    hostname  = "lkravi.me"
+    hostname  = "lkravi.live"
     ssl_cert_arn  = data.aws_acm_certificate.issued.arn
   }
 
