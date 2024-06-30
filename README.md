@@ -2,6 +2,10 @@
 
 This repository contains couple of AWS Container related services demo.
 
+## Demo
+
+[![Watch the video](https://img.youtube.com/vi/TWfzDv_mFvM/maxresdefault.jpg)](https://www.youtube.com/watch?v=TWfzDv_mFvM)
+
 ## Ways of managing AWS resources.
 
 * AWS Management [Console](https://console.aws.amazon.com/console/home).
